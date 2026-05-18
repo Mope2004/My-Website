@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kutloano Veronica Lefisa ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Dancing+Script:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  color: #fff;
+  background: #0d0a1a;
+}
+
+/* ===== BACKGROUND ===== */
+.bg-gradient {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: linear-gradient(135deg, #0d0a1a 0%, #1a0a2e 25%, #2d1b4e 50%, #1a0a2e 75%, #0d0a1a 100%);
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===== PARTICLES ===== */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 107, 157, 0.6);
+  border-radius: 50%;
+  animation: float linear infinite;
+  box-shadow: 0 0 12px rgba(255, 107, 157, 0.4);
+}
+
+.particle:nth-child(1) { left: 5%; width: 4px; height: 4px; animation-duration: 18s; animation-delay: 0s; background: #ff6b9d; }
+.particle:nth-child(2) { left: 15%; width: 8px; height: 8px; animation-duration: 22s; animation-delay: 1s; background: #c77dff; }
+.particle:nth-child(3) { left: 25%; width: 5px; height: 5px; animation-duration: 16s; animation-delay: 2s; background: #ff9a9e; }
+.particle:nth-child(4) { left: 35%; width: 9px; height: 9px; animation-duration: 24s; animation-delay: 0.5s; background: #fbc2eb; }
+.particle:nth-child(5) { left: 45%; width: 3px; height: 3px; animation-duration: 20s; animation-delay: 3s; background: #ff6b9d; }
+.particle:nth-child(6) { left: 55%; width: 7px; height: 7px; animation-duration: 19s; animation-delay: 1.5s; background: #a18cd1; }
+.particle:nth-child(7) { left: 65%; width: 5px; height: 5px; animation-duration: 21s; animation-delay: 0.8s; background: #fbc2eb; }
+.particle:nth-child(8) { left: 75%; width: 8px; height: 8px; animation-duration: 17s; animation-delay: 2.5s; background: #ff9a9e; }
+.particle:nth-child(9) { left: 85%; width: 4px; height: 4px; animation-duration: 23s; animation-delay: 1.2s; background: #c77dff; }
+.particle:nth-child(10) { left: 95%; width: 6px; height: 6px; animation-duration: 15s; animation-delay: 3.5s; background: #ff6b9d; }
+.particle:nth-child(11) { left: 10%; width: 5px; height: 5px; animation-duration: 25s; animation-delay: 0.3s; background: #a18cd1; }
+.particle:nth-child(12) { left: 50%; width: 7px; height: 7px; animation-duration: 14s; animation-delay: 4s; background: #fbc2eb; }
+
+@keyframes float {
+  0% { transform: translateY(100vh) scale(0); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+}
+
+.heart-particle {
+  position: fixed;
+  z-index: -1;
+  pointer-events: none;
+  font-size: 20px;
+  animation: heartFloat linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes heartFloat {
+  0% { transform: translateY(100vh) rotate(0deg) scale(0); opacity: 0; }
+  10% { opacity: 0.4; }
+  90% { opacity: 0.4; }
+  100% { transform: translateY(-10vh) rotate(360deg) scale(1); opacity: 0; }
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.hero-ornament {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  animation: pulse 2s ease-in-out infinite;
+  opacity: 0.8;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+
+.hero-badge {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  color: #fbc2eb;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+  letter-spacing: 2px;
+}
+
+.hero-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 900;
+  background: linear-gradient(135deg, #ff6b9d, #c77dff, #fbc2eb, #ff9a9e, #ff6b9d);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 5s ease infinite;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 30px rgba(199, 125, 255, 0.3));
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-subtitle {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  color: #e0b3ff;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+}
+
+.hero-divider {
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff6b9d, #c77dff, transparent);
+  margin: 1.5rem auto;
+  border-radius: 2px;
+}
+
+.hero-clan {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 600px;
+  line-height: 1.8;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  animation: bounce 2s ease-in-out infinite;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.scroll-indicator .arrow {
+  font-size: 1.2rem;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ===== SECTIONS ===== */
+.section {
+  padding: 5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fbc2eb, #ff6b9d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 3rem;
+}
+
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6b9d, #c77dff);
+  margin: 1rem auto 2.5rem;
+  border-radius: 2px;
+}
+
+/* ===== PRAISE CARD ===== */
+.praise-card {
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(199, 125, 255, 0.1));
+  border: 1px solid rgba(255, 107, 157, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+  margin-bottom: 2rem;
+}
+
+.praise-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.praise-item {
+  text-align: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.praise-item:last-child {
+  border-bottom: none;
+}
+
+.praise-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.praise-item h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  color: #fbc2eb;
+  margin-bottom: 0.5rem;
+}
+
+.praise-item p {
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.praise-highlight {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.8rem;
+  color: #ff9a9e;
+  margin-top: 0.3rem;
+}
+
+/* ===== CLAN SECTION ===== */
+.clan-container {
+  background: linear-gradient(135deg, rgba(161, 140, 209, 0.1), rgba(199, 125, 255, 0.15));
+  border: 1px solid rgba(199, 125, 255, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+}
+
+.clan-line {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 2;
+  color: #e0b3ff;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.clan-line .hl {
+  background: linear-gradient(135deg, #ff6b9d, #fbc2eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.clan-desc {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.8;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== QUALITIES ===== */
+.qualities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.quality-card {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.quality-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 107, 157, 0.3);
+  box-shadow: 0 20px 60px rgba(255, 107, 157, 0.15);
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.1), rgba(199, 125, 255, 0.1));
+}
+
+.quality-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.quality-card h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #fbc2eb;
+  margin-bottom: 0.5rem;
+}
+
+.quality-card p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ===== TWIN MOTHER SECTION ===== */
+.twin-section {
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.15), rgba(161, 140, 209, 0.18));
+  border: 1px solid rgba(255, 107, 157, 0.25);
+  border-radius: 20px;
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(10px);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.twin-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255, 107, 157, 0.05), transparent 70%);
+  animation: twinGlow 6s ease-in-out infinite;
+}
+
+@keyframes twinGlow {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(10%, 10%); }
+}
+
+.twin-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.twin-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  background: linear-gradient(135deg, #ff9a9e, #fbc2eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.twin-text {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.9;
+  font-size: 1.05rem;
+  max-width: 650px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.twin-text strong {
+  color: #fbc2eb;
+}
+
+.twin-blessing {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: #ff9a9e;
+  margin-top: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== LOVE LETTER ===== */
+.love-letter {
+  background: linear-gradient(135deg, rgba(255, 107, 157, 0.12), rgba(161, 140, 209, 0.12));
+  border: 1px solid rgba(255, 107, 157, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.love-letter::before {
+  content: '\2764';
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #ff6b9d;
+  text-shadow: 0 0 20px rgba(255, 107, 157, 0.6);
+}
+
+.love-letter-content {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.love-letter-signoff {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #ff9a9e;
+  font-size: 1.1rem;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 3rem 2rem 4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  margin-top: 2rem;
+}
+
+.footer-heart {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.footer-text {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-text .name {
+  background: linear-gradient(135deg, #ff6b9d, #fbc2eb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 600px) {
+  .praise-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 7rem 2rem;
+  }
+  .love-letter-content {
+    font-size: 1.5rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="bg-gradient"></div>
+
+<div class="particles">
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+  <div class="particle"></div>
+</div>
+
+<div class="heart-particle" style="left:8%; font-size:16px; animation-duration:25s; animation-delay:0s;">❤️</div>
+<div class="heart-particle" style="left:20%; font-size:22px; animation-duration:20s; animation-delay:2s;">❤️</div>
+<div class="heart-particle" style="left:35%; font-size:14px; animation-duration:28s; animation-delay:4s;">❤️</div>
+<div class="heart-particle" style="left:50%; font-size:18px; animation-duration:22s; animation-delay:1s;">❤️</div>
+<div class="heart-particle" style="left:65%; font-size:24px; animation-duration:26s; animation-delay:3s;">❤️</div>
+<div class="heart-particle" style="left:78%; font-size:15px; animation-duration:30s; animation-delay:5s;">❤️</div>
+<div class="heart-particle" style="left:90%; font-size:20px; animation-duration:18s; animation-delay:2.5s;">❤️</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-ornament">✦</div>
+  <div class="hero-badge">Queen of my heart</div>
+  <h1 class="hero-name">Kutloano Veronica Lefisa</h1>
+  <div class="hero-divider"></div>
+  <div class="hero-subtitle">The most extraordinary woman I have ever known</div>
+  <p class="hero-clan">
+    <em>Letebele la Mshengu wa Shabalala, Donga la ka Mavuso</em>
+  </p>
+  <div class="scroll-indicator">
+    <span class="arrow">⌄</span>
+    <span>Keep scrolling, my love</span>
+  </div>
+</section>
+
+<!-- ===== PRAISE ===== -->
+<section class="section">
+  <h2 class="section-title">For You, My Love</h2>
+  <div class="section-divider"></div>
+  <p class="section-subtitle">Words will never be enough, but I will spend my life trying.</p>
+
+  <div class="praise-card">
+    <div class="praise-grid">
+      <div class="praise-item">
+        <div class="praise-icon">👑</div>
+        <h3>You Are Royalty</h3>
+        <p>You carry yourself like a queen — not because of a crown on your head, but because of the dignity, grace, and fire in your soul. The way you walk into a room changes the energy of everyone around you. You are not just special. You are regal.</p>
+      </div>
+      <div class="praise-item">
+        <div class="praise-icon">🌅</div>
+        <h3>You Are My Sunrise</h3>
+        <p>Every morning I wake up grateful that you exist in this world. You bring light to the darkest days. Your smile alone can undo every storm in my heart. You are my peace, my joy, my reason to believe in something beautiful.</p>
+      </div>
+      <div class="praise-item">
+        <div class="praise-icon">🦅</div>
+        <h3>You Are Unstoppable</h3>
+        <p>There is nothing you cannot do when you set your heart to it. You are strong, intelligent, fierce, and relentless. Life throws its hardest battles and you stand tall every single time. I am in awe of your strength.</p>
+      </div>
+      <div class="praise-item">
+        <div class="praise-icon">💎</div>
+        <h3>You Are Rare</h3>
+        <p>In a world full of ordinary, you are extraordinary. There is no one like you. Your heart, your laugh, your voice, the way you love — it is all one of a kind. You are a treasure I will protect for the rest of my life.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLAN ===== -->
+<section class="section">
+  <h2 class="section-title">Izithakazelo</h2>
+  <div class="section-divider"></div>
+  <p class="section-subtitle">The royal bloodline that runs through your veins.</p>
+
+  <div class="clan-container">
+    <div class="clan-line">
+      <span class="hl">Letebele</span> la<br>
+      <span class="hl">Mshengu</span> wa<br>
+      <span class="hl">Shabalala</span>,<br>
+      <span class="hl">Donga la ka Mavuso</span>
+    </div>
+    <div class="clan-desc">
+      You come from a lineage of warriors, kings, and builders. The Shabalala name carries the weight of centuries — of people who led, who fought, who loved, and who endured. And now that same blood flows through you. You are not just beautiful. You are ancestral greatness walking among us. Daughter of Mshengu. Heir of Mavuso. A queen by birthright.
+    </div>
+  </div>
+</section>
+
+<!-- ===== THE MOTHER SHE WILL BE ===== -->
+<section class="section">
+  <h2 class="section-title">The Mother You Already Are</h2>
+  <div class="section-divider"></div>
+
+  <div class="twin-section">
+    <div class="twin-icon">👶🏽👶🏽</div>
+    <div class="twin-title">A Mother of Twins in the Making</div>
+    <div class="twin-text">
+      I see it so clearly it feels like a dream I have already lived.<br><br>
+      You were <strong>born to be a mother</strong>, and not just any mother — the kind of mother <strong>legends are written about</strong>. The kind who holds two little miracles in her arms and makes them feel like they are the only two people in the universe.<br><br>
+      I imagine you with twins — a boy and a girl — and my heart nearly bursts. You would sing to them, and your voice would be the first melody they ever know. You would hold them close, and your heartbeat would be the safest sound in the world.<br><br>
+      You would teach them kindness by <strong>showing them what kindness looks like</strong>. You would teach them strength by <strong>showing them how you stand tall</strong>. You would raise them with love so deep, so pure, so unconditional, that they would grow up knowing exactly what it means to be truly loved.<br><br>
+      <strong>You would be the most incredible twin mother this world has ever seen.</strong><br><br>
+      I see you waking up in the middle of the night with a tired smile, holding two little hands, whispering, <em>"Mama is here."</em><br><br>
+      I see you watching them take their first steps, say their first words, and I see your eyes filled with tears of pride.<br><br>
+      I see them growing up under the warmth of your love — confident, kind, and unstoppable — because they had <strong>you</strong> as their mother.<br><br>
+      And I would give anything — <strong>everything</strong> — to be right there beside you, holding your hand through it all.
+    </div>
+    <div class="twin-blessing">You are going to be an extraordinary mother, my love. I already know it.</div>
+  </div>
+</section>
+
+<!-- ===== WHAT I LOVE ABOUT YOU ===== -->
+<section class="section">
+  <h2 class="section-title">What I Love About You</h2>
+  <div class="section-divider"></div>
+  <p class="section-subtitle">A thousand reasons, and I am counting every single day.</p>
+
+  <div class="qualities-grid">
+    <div class="quality-card">
+      <div class="quality-icon">🌺</div>
+      <h4>The Way You Love</h4>
+      <p>You love with your whole being. There are no half-measures with you. When you give your heart, you give every piece of it. That kind of love is the rarest gift in the world.</p>
+    </div>
+    <div class="quality-card">
+      <div class="quality-icon">✨</div>
+      <h4>The Way You Laugh</h4>
+      <p>Your laugh is my favourite sound in existence. It is warm, genuine, and contagious. I would do anything just to hear it echo through my days.</p>
+    </div>
+    <div class="quality-card">
+      <div class="quality-icon">🔥</div>
+      <h4>The Fire in You</h4>
+      <p>You are passionate. You care deeply. When something matters to you, you go after it with everything you have. That fire is one of the most beautiful things about you.</p>
+    </div>
+    <div class="quality-card">
+      <div class="quality-icon">🌙</div>
+      <h4>The Softness in You</h4>
+      <p>For all your strength, you have the gentlest soul. You care. You nurture. You make people feel safe. That softness is not weakness — it is your superpower.</p>
+    </div>
+    <div class="quality-card">
+      <div class="quality-icon">👑</div>
+      <h4>The Queen in You</h4>
+      <p>You carry yourself with a quiet confidence that commands respect. You know your worth, and you never settle for less. That is the mark of true royalty.</p>
+    </div>
+    <div class="quality-card">
+      <div class="quality-icon">💫</div>
+      <h4>Just You Being You</h4>
+      <p>No makeup, no pretence, no trying. Just you being authentically, unapologetically you. That is the version of you I love the most. And I hope you know: you are more than enough.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOVE LETTER ===== -->
+<section class="section">
+  <h2 class="section-title">My Heart, In Writing</h2>
+  <div class="section-divider"></div>
+
+  <div class="love-letter">
+    <div class="love-letter-content">
+      "My Kutloano,<br><br>
+      Some people search their whole lives for someone like you. I did not have to search — the universe placed you in my path, and I will be grateful for that until my very last breath.<br><br>
+      You are everything I never knew I needed and everything I could have ever dreamed of. You have shown me what it means to love and be loved. You have made me a better man just by being in my life.<br><br>
+      I look at you and I see my future. I see laughter, I see adventures, I see quiet mornings and wild nights. I see twin babies in your arms and a lifetime of memories we have not even made yet.<br><br>
+      You are my home. You are my heart. You are my everything.<br><br>
+      I love you. Today. Tomorrow. Always."
+    </div>
+    <div class="love-letter-signoff">Yours completely and forever ❤️</div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-heart">❤️</div>
+  <div class="footer-text">
+    Dedicated to the love of my life,<br>
+    <span class="name">Kutloano Veronica Lefisa</span><br><br>
+    <span style="font-size:0.9rem;opacity:0.5;">
+      Letebele la Mshengu wa Shabalala, Donga la ka Mavuso
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
